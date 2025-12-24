@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tasky - Gestión de Tareas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>📋 Tasky</h1>
+  <button id="btnNueva">+ Nueva tarea</button>
+</header>
+
+<section class="filters">
+  <select id="filtroMateria">
+    <option value="">Todas las materias</option>
+  </select>
+
+  <select id="ordenar">
+    <option value="">Ordenar</option>
+    <option value="fecha">Por fecha</option>
+    <option value="prioridad">Por prioridad</option>
+  </select>
+</section>
+
+<main id="taskContainer" class="grid"></main>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <form id="taskForm">
+    <h2 id="modalTitle">Nueva Tarea</h2>
+
+    <input type="hidden" id="taskId">
+
+    <label>Título</label>
+    <input type="text" id="titulo" required>
+
+    <label>Descripción</label>
+    <textarea id="descripcion" required></textarea>
+
+    <label>Materia</label>
+    <input type="text" id="materia" required>
+
+    <label>Fecha de entrega</label>
+    <input type="date" id="fecha" required>
+
+    <label>Prioridad</label>
+    <select id="prioridad">
+      <option>Baja</option>
+      <option>Media</option>
+      <option>Alta</option>
+    </select>
+
+    <div class="actions">
+      <button type="submit">Guardar</button>
+      <button type="button" id="cerrar">Cancelar</button>
+    </div>
+  </form>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
